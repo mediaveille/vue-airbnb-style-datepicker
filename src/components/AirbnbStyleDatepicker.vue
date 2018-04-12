@@ -312,7 +312,9 @@ export default {
       }
     }
     window.addEventListener('resize', this._handleWindowResizeEvent)
-    window.addEventListener('click', this._handleWindowClickEvent)
+    if (!this.inline) {
+      window.addEventListener('click', this._handleWindowClickEvent)
+    }
   },
   mounted() {
     this.triggerElement = this.isTest
