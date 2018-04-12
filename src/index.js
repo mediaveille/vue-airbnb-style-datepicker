@@ -6,10 +6,10 @@ const AirbnbStyleDatepickerPlugin = {
   install(Vue, options) {
     Vue.directive('click-outside', ClickOutside)
 
-    Vue.component(AirbnbStyleDatepicker.name, {
-      ...options,
-      ...AirbnbStyleDatepicker
-    })
+    Vue.component(
+      AirbnbStyleDatepicker.name,
+      Object.assign({}, options, AirbnbStyleDatepicker)
+    )
   }
 }
 // User has to install the component by themselves, to allow to pass options
