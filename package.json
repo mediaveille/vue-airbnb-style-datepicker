@@ -7,7 +7,6 @@
     "url": "MikaelEdebro/vue-airbnb-style-datepicker",
     "type": "git"
   },
-  "files": ["src"],
   "scripts": {
     "build": "rimraf dist/ && npm run build-main && npm run build-no-dep",
     "build-main":
