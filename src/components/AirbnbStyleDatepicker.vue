@@ -339,7 +339,9 @@ export default {
       if (event.target.id === this.triggerElementId) {
         return
       }
-      this.closeDatepicker()
+      if (!this.inline && this.showDatepicker) {
+        this.closeDatepicker()
+      }
     },
     handleTriggerInput(event) {
       const keys = {
